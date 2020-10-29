@@ -1,0 +1,7 @@
+/data
+/ERNIE
+/ernie-large
+/paddlepaddle
+/slurm-out
+/saved_weights*
+*.slurm
