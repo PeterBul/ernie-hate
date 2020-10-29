@@ -1,0 +1,96 @@
+{
+  "davidson":
+  {
+    "base" :
+    {
+      "2e-05":
+      {
+        "results": "output/1603387120/test_out-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/ernie_davidson_1797147_4294967294.out"
+      },
+      "1e-05":
+      {
+        "results": "output/1603446166/test_out-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_1801684_4294967294.out"
+      }
+    },
+    "large":
+    {
+      "1e-05":
+      {
+        "results": "output/1603732743/test_out_large-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_large_1872018_4294967294.out"
+      },
+      "2e-05":
+      {
+        "results": "output/1603739791/test_out_large-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_large_1879670_4294967294.out"
+      }
+    }
+    
+  },
+  "founta":
+  {
+    "base" :
+    {
+      "1e-05":
+      {
+        "results": "output/1603801173/test_out-founta-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_founta_1925388_4294967294.out"
+      },
+      "2e-05":
+      {
+        "results": "output/1603986901/test_out-2101467-founta-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/ernie_founta_1e-05_2101467.out",
+        "checkpoints": "checkpoints/founta-2101467/step_1897"
+      }
+      
+    },
+    "large":
+    {
+      "1e-05":
+      {
+        "results": "output/1603987745/test_out_large-2101547-founta-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_founta_large_2e-05_2101547.out",
+        "checkpoints": "checkpoints/founta-2101547/step_1897"
+      },
+      "2e-05":
+      {
+        "results": "output/1603987748/test_out_large-2101548-founta-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_founta_large_2e-05_2101548.out",
+        "checkpoints": "checkpoints/founta-2101548/step_1897"
+      }
+    }
+    
+  },
+  "solid":
+  {
+    "base" :
+    {
+      "1e-05":
+      {
+        "results": "",
+        "log":"../slurm-out/archive/"
+      },
+      "2e-05":
+      {
+        "results": "",
+        "log": "../slurm-out/archive/"
+      }
+      
+    },
+    "large":
+    {
+      "1e-05":
+      {
+        "results": "output/1603973903/test_out_large-solid-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_solid_large_1993859_4294967294.out"
+      },
+      "2e-05":
+      {
+        "results": "",
+        "log":"../slurm-out/archive/"
+      }
+    }
+  }
+}
