@@ -9,7 +9,6 @@ def convert_dataset(ds):
 
   print(df.head())
 
-  df.to_csv('../data/founta/conv/{}.tsv'.format(ds), sep='\t')
+  df.to_csv('../data/founta/conv/{}.tsv'.format(ds), sep='\t', index=False)
 
-convert_dataset('train')
-convert_dataset('dev')
+convert_dataset('test')
