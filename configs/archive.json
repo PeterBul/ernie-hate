@@ -5,26 +5,30 @@
     {
       "2e-05":
       {
-        "results": "output/1603387120/test_out-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/ernie_davidson_1797147_4294967294.out"
+        "results": "output/1603992207/test_out-2110798-davidson-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/ernie_davidson_full_2e-05_2110798.out",
+        "checkpoints":"checkpoints/davidson-2110798/step_1241"
       },
       "1e-05":
       {
-        "results": "output/1603446166/test_out-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_1801684_4294967294.out"
+        "results": "output/1603992234/test_out-2110713-davidson-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_full_1e-05_2110713.out",
+        "checkpoints":"checkpoints/davidson-2110713/step_1241"
       }
     },
     "large":
     {
       "1e-05":
       {
-        "results": "output/1603732743/test_out_large-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_large_1872018_4294967294.out"
+        "results": "output/1603992791/test_out_large-2110962-davidson-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_full_large_1e-05_2110962.out",
+        "checkpoints":"checkpoints/davidson-2110962/step_1241"
       },
       "2e-05":
       {
-        "results": "output/1603739791/test_out_large-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_large_1879670_4294967294.out"
+        "results": "output/1603992941/test_out_large-2111012-davidson-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_full_large_2e-05_2111012.out",
+        "checkpoints":"checkpoints/davidson-2111012/step_1241"
       }
     }
     
@@ -35,14 +39,15 @@
     {
       "1e-05":
       {
-        "results": "output/1603801173/test_out-founta-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_founta_1925388_4294967294.out"
+        "results": "output/1603992749/test_out-2111067-founta-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_founta_full_1e-05_2111067.out",
+        "checkpoints": "checkpoints/founta-2111067/step_2529"
       },
       "2e-05":
       {
-        "results": "output/1603986901/test_out-2101467-founta-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/ernie_founta_1e-05_2101467.out",
-        "checkpoints": "checkpoints/founta-2101467/step_1897"
+        "results": "output/1603992925/test_out-2111068-founta-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/ernie_founta_full_2e-05_2111068.out",
+        "checkpoints": "checkpoints/founta-2111068/step_2529"
       }
       
     },
@@ -50,15 +55,15 @@
     {
       "1e-05":
       {
-        "results": "output/1603987745/test_out_large-2101547-founta-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_founta_large_2e-05_2101547.out",
-        "checkpoints": "checkpoints/founta-2101547/step_1897"
+        "results": "output/1603994248/test_out_large-2111118-founta-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_founta_full_large_1e-05_2111118.out",
+        "checkpoints": "checkpoints/founta-2111118/step_2529"
       },
       "2e-05":
       {
-        "results": "output/1603987748/test_out_large-2101548-founta-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_founta_large_2e-05_2101548.out",
-        "checkpoints": "checkpoints/founta-2101548/step_1897"
+        "results": "output/1603994729/test_out_large-2111119-founta-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_founta_full_large_2e-05_2111119.out",
+        "checkpoints": "checkpoints/founta-2111119/step_2529"
       }
     }
     
@@ -69,13 +74,13 @@
     {
       "1e-05":
       {
-        "results": "",
-        "log":"../slurm-out/archive/"
+        "results": "output/1603997765/test_out-solid-1e-5-32-1.tsv",
+        "log":"../slurm-out/archive/ernie_solid_1e-05_2084341_4294967294.out"
       },
       "2e-05":
       {
-        "results": "",
-        "log": "../slurm-out/archive/"
+        "results": "output/1603996146/test_out-solid-2e-5-32-1.tsv",
+        "log": "../slurm-out/archive/ernie_solid_2e-05_2084342_4294967294.out"
       }
       
     },
@@ -88,8 +93,8 @@
       },
       "2e-05":
       {
-        "results": "",
-        "log":"../slurm-out/archive/"
+        "results": "output/1604038536/test_out_large-solid-2e-5-32-1.tsv",
+        "log":"../slurm-out/archive/ernie_solid_large_2e-05_2086156.out"
       }
     }
   }
