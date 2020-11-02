@@ -93,9 +93,44 @@
       },
       "2e-05":
       {
-        "results": "output/1604038536/test_out_large-solid-2e-5-32-1.tsv",
+        "results": "output/1604073875/test_out_large-2195113-solid-2e-5-32-4.tsv",
         "log":"../slurm-out/archive/ernie_solid_large_2e-05_2086156.out"
       }
     }
+  },
+  "founta/conv":
+  {
+    "base" :
+    {
+      "1e-05":
+      {
+        "results": "output/1604074555/test_out-2198744-founta/conv-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/base_founta_conv_1e-5_2198744.out",
+        "checkpoints": ""
+      },
+      "2e-05":
+      {
+        "results": "output/1604075251/test_out-2198795-founta/conv-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/base_founta_conv_2e-5_2198795.out",
+        "checkpoints": ""
+      }
+      
+    },
+    "large":
+    {
+      "1e-05":
+      {
+        "results": "output/1604075878/test_out_large-2198990-founta/conv-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/large_founta_conv_1e-5_2198990.out",
+        "checkpoints": ""
+      },
+      "2e-05":
+      {
+        "results": "output/1604076535/test_out_large-2198991-founta/conv-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/large_founta_conv_2e-5_2198991.out",
+        "checkpoints": ""
+      }
+    }
+    
   }
 }
