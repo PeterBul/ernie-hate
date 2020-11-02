@@ -11,4 +11,12 @@ def convert_dataset(ds):
 
   df.to_csv('../data/founta/conv/{}.tsv'.format(ds), sep='\t', index=False)
 
-convert_dataset('test')
+def remove_neither(ds):
+  df = pd.read_csv('../data/davidson/{}.tsv'.format(ds), sep='\t')
+  df = df[df.label != 2]
+  print(df.label.value_counts())
+  print(df.head())
+
+  df.to_csv('../data/davidson/filtered/{}.tsv'.format(ds), sep='\t', index=False)
+
+remove_neither('train')
