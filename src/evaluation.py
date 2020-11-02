@@ -16,9 +16,9 @@ args = parser.parse_args()
 
 ERNIE_PATH = '../ERNIE/'
 archive_path = '../configs/archive.json'
-dataset = 'solid'
-target_names = ['NOT', 'OFF']
-#target_names = ['Hateful', 'Offensive', 'Neither']
+dataset = 'founta/conv'
+#target_names = ['NOT', 'OFF']
+target_names = ['Hateful', 'Offensive', 'Neither']
 #target_names = ['Abusive', 'Hateful', 'Normal', 'Spam']
 
 founta2davidson = {0:1, 1:0, 2:2, 3:2}
