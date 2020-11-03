@@ -4,4 +4,5 @@
 /paddlepaddle
 /slurm-out
 /saved_weights*
+*__pycache__*
 *.slurm
