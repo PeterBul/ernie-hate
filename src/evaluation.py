@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from print_metrics import print_metrics, get_classification_report, flatten_classification_report
 import argparse
+from ensamble import get_majority_voting, get_sum_of_probs
 
 parser = argparse.ArgumentParser()
 
@@ -24,6 +25,7 @@ target_names = ['Hateful', 'Offensive', 'Neither']
 
 founta2davidson = {0:1, 1:0, 2:2, 3:2}
 
+
 def evaluate(model_size, lr_text):
   with open(archive_path, 'r') as f:
     text = f.read()
@@ -35,35 +37,48 @@ def evaluate(model_size, lr_text):
     df.preds = df.preds.apply(lambda p: founta2davidson[p])
   
   preds = df.preds.to_numpy(dtype=np.int32)
-  test_df = pd.read_csv(os.path.join('../data', test_dataset, 'test.tsv'), sep='\t')
-  y_true = test_df.label.to_numpy()
+  y_true = get_y_true(test_dataset)
 
   print_metrics(y_true, preds, target_names)
 
+def get_path(model_dataset, test_dataset, model_size, lr):
+  archive = load_archive()
+  return archive[model_dataset][test_dataset][model_size][lr]['results']
 
 def batch_evaluate():
-  archive = load_archive()
-  target_names = ['Hateful', 'Offensive', 'Neither']
   rows = []
-  for test_dataset in ['davidson', 'founta/conv']:
-    test_df = pd.read_csv(os.path.join('../data', test_dataset, 'test.tsv'), sep='\t')
-    y_true = test_df.label.to_numpy()
-    probs = []
-    for model_dataset in ['davidson', 'founta/conv']:
-      for model_size in ['base', 'large']:
-        for lr in ['1e-05', '2e-05']:
-          results_path = archive[model_dataset][model_size][lr][test_dataset]['results']
-          results_df = pd.read_csv(os.path.join(ERNIE_PATH, results_path), sep='\t', names=['preds', 'probs'])
-          preds = results_df.preds.to_numpy(dtype=np.int32)
-          columns, row = flatten_classification_report(get_classification_report(y_true, preds, target_names))
-          rows.append(row)
-
-          results_df.probs = results_df.probs.apply(lambda prob: np.array([float(p) for p in prob[1:-1].split()])) 
-          probs_tmp = np.stack(results_df.probs, axis=0)
-          probs_tmp = probs_tmp[:,:2]
-          probs.append(probs_tmp)
+  y_true = get_y_true(test_dataset)
+  probs = []
+  preds = []
+  for model_size in ['base', 'large']:
+    for lr in ['1e-05', '2e-05']:
+      preds_tmp, probs_tmp = get_preds_and_probs(model_dataset, test_dataset, model_size, lr)
+      row = flatten_classification_report(get_classification_report(y_true, preds_tmp, target_names), name="{} {}".format(model_size, lr))
+      rows.append(row)
+      probs.append(probs_tmp)
+      preds.append(preds_tmp)
   
+  y_maj = get_majority_voting(preds)
+  y_sum = get_sum_of_probs(probs)
+  row = flatten_classification_report(get_classification_report(y_true, y_maj, target_names), name="Ensamble Majority Vote")
+  rows.append(row)
+  columns, row = flatten_classification_report(get_classification_report(y_true, y_sum, target_names), name="Ensamble Sum", return_columns=True)
+  rows.append(row)
   return pd.DataFrame(rows, columns=columns)
+
+def get_preds_and_probs(model_dataset, test_dataset, model_size, lr):
+  path = get_path(model_dataset, test_dataset, model_size, lr)
+  df = pd.read_csv(os.path.join(ERNIE_PATH, path), sep="\t", names=['preds', 'probs'])
+  df.probs = df.probs.apply(lambda prob: np.array([float(p) for p in prob[1:-1].split()])) 
+  probs = np.stack(df.probs, axis=0)
+  probs = probs[:,:len(target_names)]
+  preds = df.preds.to_numpy(dtype=np.int32)
+  return preds, probs
+
+
+def get_y_true(dataset):
+  test_df = pd.read_csv(os.path.join('../data', dataset, 'test.tsv'), sep='\t')
+  return test_df.label.to_numpy()
 
 
 
