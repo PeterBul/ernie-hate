@@ -11,7 +11,7 @@ def get_classification_report(true, pred, target_names):
 
 
 
-def flatten_classification_report(classification_report, return_columns=False):
+def flatten_classification_report(classification_report, name, return_columns=False):
   report = classification_report.split('\n')
 
   num_labels = len(report) - 7
@@ -20,8 +20,8 @@ def flatten_classification_report(classification_report, return_columns=False):
 
   columns = ["{}_{}".format(label, metric) for label in target_names + ['weighted-avg', 'macro-avg'] for metric in ['precision', 'recall', 'f1']]
   columns.append('accuracy')
-
-  row = []
+  columns = ['name'] + columns
+  row = [name]
   for i in range(2, 2 + num_labels):
     row_tmp = report[i].split()
     row += row_tmp[1:4]
