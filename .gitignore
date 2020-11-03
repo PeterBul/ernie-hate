@@ -6,3 +6,4 @@
 /saved_weights*
 *__pycache__*
 *.slurm
+src/tmp*
