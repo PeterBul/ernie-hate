@@ -1,200 +1,220 @@
 {
   "davidson":
   {
-    "base" :
+    "davidson":
     {
-      "2e-05":
+      "base" :
       {
-        "results": "output/1603992207/test_out-2110798-davidson-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/ernie_davidson_full_2e-05_2110798.out",
-        "checkpoints":"checkpoints/davidson-2110798/step_1241"
+        "2e-05":
+        {
+          "results": "output/1603992207/test_out-2110798-davidson-2e-5-32-4.tsv",
+          "log": "../slurm-out/archive/ernie_davidson_full_2e-05_2110798.out",
+          "checkpoints":"checkpoints/davidson-2110798/step_1241"
+        },
+        "1e-05":
+        {
+          "results": "output/1603992234/test_out-2110713-davidson-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_davidson_full_1e-05_2110713.out",
+          "checkpoints":"checkpoints/davidson-2110713/step_1241"
+        }
       },
-      "1e-05":
+      "large":
       {
-        "results": "output/1603992234/test_out-2110713-davidson-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_full_1e-05_2110713.out",
-        "checkpoints":"checkpoints/davidson-2110713/step_1241"
-      }
-    },
-    "large":
-    {
-      "1e-05":
-      {
-        "results": "output/1603992791/test_out_large-2110962-davidson-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_full_large_1e-05_2110962.out",
-        "checkpoints":"checkpoints/davidson-2110962/step_1241"
-      },
-      "2e-05":
-      {
-        "results": "output/1603992941/test_out_large-2111012-davidson-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_full_large_2e-05_2111012.out",
-        "checkpoints":"checkpoints/davidson-2111012/step_1241"
+        "1e-05":
+        {
+          "results": "output/1603992791/test_out_large-2110962-davidson-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_davidson_full_large_1e-05_2110962.out",
+          "checkpoints":"checkpoints/davidson-2110962/step_1241"
+        },
+        "2e-05":
+        {
+          "results": "output/1603992941/test_out_large-2111012-davidson-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_davidson_full_large_2e-05_2111012.out",
+          "checkpoints":"checkpoints/davidson-2111012/step_1241"
+        }
       }
     }
-    
   },
   "davidson/filtered":
   {
-    "base" :
+    "davidson/filtered":
     {
-      "1e-05":
+      "base" :
       {
-        "results": "output/1604403934/test_out-2315014-davidson/filtered-1e-5-32-4.tsv",
-        "log": "../slurm-out/archive/base_davidson_filtered_oversampled_1e-5_2315014.out",
-        "checkpoints":"checkpoints/davidson-2110798/step_1241"
+        "1e-05":
+        {
+          "results": "output/1604403934/test_out-2315014-davidson/filtered-1e-5-32-4.tsv",
+          "log": "../slurm-out/archive/base_davidson_filtered_oversampled_1e-5_2315014.out",
+          "checkpoints":"checkpoints/davidson-2110798/step_1241"
+        },
+        "2e-05":
+        {
+          "results": "output/1604403937/test_out-2315015-davidson/filtered-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/base_davidson_filtered_oversampled_2e-5_2315015.out",
+          "checkpoints":"checkpoints/davidson-2110713/step_1241"
+        }
       },
-      "2e-05":
+      "large":
       {
-        "results": "output/1604403937/test_out-2315015-davidson/filtered-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/base_davidson_filtered_oversampled_2e-5_2315015.out",
-        "checkpoints":"checkpoints/davidson-2110713/step_1241"
-      }
-    },
-    "large":
-    {
-      "1e-05":
-      {
-        "results": "output/1603992791/test_out_large-2110962-davidson-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_full_large_1e-05_2110962.out",
-        "checkpoints":"checkpoints/davidson-2110962/step_1241"
-      },
-      "2e-05":
-      {
-        "results": "output/1603992941/test_out_large-2111012-davidson-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_davidson_full_large_2e-05_2111012.out",
-        "checkpoints":"checkpoints/davidson-2111012/step_1241"
+        "1e-05":
+        {
+          "results": "output/1603992791/test_out_large-2110962-davidson-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_davidson_full_large_1e-05_2110962.out",
+          "checkpoints":"checkpoints/davidson-2110962/step_1241"
+        },
+        "2e-05":
+        {
+          "results": "output/1603992941/test_out_large-2111012-davidson-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_davidson_full_large_2e-05_2111012.out",
+          "checkpoints":"checkpoints/davidson-2111012/step_1241"
+        }
       }
     }
-    
   },
   "founta":
   {
-    "base" :
+    "founta":
     {
-      "1e-05":
+      "base" :
       {
-        "results": "output/1603992749/test_out-2111067-founta-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_founta_full_1e-05_2111067.out",
-        "checkpoints": "checkpoints/founta-2111067/step_2529"
+        "1e-05":
+        {
+          "results": "output/1603992749/test_out-2111067-founta-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_founta_full_1e-05_2111067.out",
+          "checkpoints": "checkpoints/founta-2111067/step_2529"
+        },
+        "2e-05":
+        {
+          "results": "output/1603992925/test_out-2111068-founta-2e-5-32-4.tsv",
+          "log": "../slurm-out/archive/ernie_founta_full_2e-05_2111068.out",
+          "checkpoints": "checkpoints/founta-2111068/step_2529"
+        }
+        
       },
-      "2e-05":
+      "large":
       {
-        "results": "output/1603992925/test_out-2111068-founta-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/ernie_founta_full_2e-05_2111068.out",
-        "checkpoints": "checkpoints/founta-2111068/step_2529"
-      }
-      
-    },
-    "large":
-    {
-      "1e-05":
-      {
-        "results": "output/1603994248/test_out_large-2111118-founta-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_founta_full_large_1e-05_2111118.out",
-        "checkpoints": "checkpoints/founta-2111118/step_2529"
-      },
-      "2e-05":
-      {
-        "results": "output/1603994729/test_out_large-2111119-founta-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_founta_full_large_2e-05_2111119.out",
-        "checkpoints": "checkpoints/founta-2111119/step_2529"
+        "1e-05":
+        {
+          "results": "output/1603994248/test_out_large-2111118-founta-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_founta_full_large_1e-05_2111118.out",
+          "checkpoints": "checkpoints/founta-2111118/step_2529"
+        },
+        "2e-05":
+        {
+          "results": "output/1603994729/test_out_large-2111119-founta-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_founta_full_large_2e-05_2111119.out",
+          "checkpoints": "checkpoints/founta-2111119/step_2529"
+        }
       }
     }
+    
     
   },
   "solid":
   {
-    "base" :
+    "solid":
     {
-      "1e-05":
+      "base" :
       {
-        "results": "output/1603997765/test_out-solid-1e-5-32-1.tsv",
-        "log":"../slurm-out/archive/ernie_solid_1e-05_2084341_4294967294.out"
+        "1e-05":
+        {
+          "results": "output/1603997765/test_out-solid-1e-5-32-1.tsv",
+          "log":"../slurm-out/archive/ernie_solid_1e-05_2084341_4294967294.out"
+        },
+        "2e-05":
+        {
+          "results": "output/1603996146/test_out-solid-2e-5-32-1.tsv",
+          "log": "../slurm-out/archive/ernie_solid_2e-05_2084342_4294967294.out"
+        }
+        
       },
-      "2e-05":
+      "large":
       {
-        "results": "output/1603996146/test_out-solid-2e-5-32-1.tsv",
-        "log": "../slurm-out/archive/ernie_solid_2e-05_2084342_4294967294.out"
-      }
-      
-    },
-    "large":
-    {
-      "1e-05":
-      {
-        "results": "output/1603973903/test_out_large-solid-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_solid_large_1993859_4294967294.out"
-      },
-      "2e-05":
-      {
-        "results": "output/1604073875/test_out_large-2195113-solid-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/base_founta-conv--davidson_1e-5_2315182.out"
+        "1e-05":
+        {
+          "results": "output/1603973903/test_out_large-solid-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie_solid_large_1993859_4294967294.out"
+        },
+        "2e-05":
+        {
+          "results": "output/1604073875/test_out_large-2195113-solid-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/base_founta-conv--davidson_1e-5_2315182.out"
+        }
       }
     }
+    
   },
   "founta/conv-davidson":
   {
-    "base" :
+    "davidson":
     {
-      "1e-05":
+      "base" :
       {
-        "results": "output/1604412219/test_out-2315182-davidson-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/base_founta-conv--davidson_1e-5_2315182.out"
+        "1e-05":
+        {
+          "results": "output/1604412219/test_out-2315182-davidson-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/base_founta-conv--davidson_1e-5_2315182.out"
+        },
+        "2e-05":
+        {
+          "results": "output/1604412557/test_out-2315189-davidson-2e-5-32-4.tsv",
+          "log": "../slurm-out/archive/base_founta-conv--davidson_2e-5_2315189.out"
+        }
+        
       },
-      "2e-05":
+      "large":
       {
-        "results": "output/1604412557/test_out-2315189-davidson-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/base_founta-conv--davidson_2e-5_2315189.out"
-      }
-      
-    },
-    "large":
-    {
-      "1e-05":
-      {
-        "results": "output/1604409632/test_out_large-2315059-davidson-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/large_founta-conv--davidson_1e-5_2315059.out"
-      },
-      "2e-05":
-      {
-        "results": "output/1604409714/test_out_large-2315060-davidson-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/large_founta-conv--davidson_2e-5_2315060.out"
+        "1e-05":
+        {
+          "results": "output/1604409632/test_out_large-2315059-davidson-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/large_founta-conv--davidson_1e-5_2315059.out"
+        },
+        "2e-05":
+        {
+          "results": "output/1604409714/test_out_large-2315060-davidson-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/large_founta-conv--davidson_2e-5_2315060.out"
+        }
       }
     }
+    
   },
   "davidson-founta/conv":
   {
-    "base" :
+    "founta/conv":
     {
-      "1e-05":
+      "base" :
       {
-        "results": "output/1604410289/test_out-2315090-founta/conv-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/base_davidson--founta-conv_1e-5_2315090.out",
-        "checkpoints": "checkpoints/founta/conv-2315090"
+        "1e-05":
+        {
+          "results": "output/1604410289/test_out-2315090-founta/conv-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/base_davidson--founta-conv_1e-5_2315090.out",
+          "checkpoints": "checkpoints/founta/conv-2315090"
+        },
+        "2e-05":
+        {
+          "results": "output/1604410399/test_out-2315091-founta/conv-2e-5-32-4.tsv",
+          "log": "../slurm-out/archive/base_davidson--founta-conv_2e-5_2315091.out",
+          "checkpoints": "checkpoints/founta/conv-2315091"
+        }
+        
       },
-      "2e-05":
+      "large":
       {
-        "results": "output/1604410399/test_out-2315091-founta/conv-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/base_davidson--founta-conv_2e-5_2315091.out",
-        "checkpoints": "checkpoints/founta/conv-2315091"
-      }
-      
-    },
-    "large":
-    {
-      "1e-05":
-      {
-        "results": "output/1604411829/test_out_large-2315092-founta/conv-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/large_davidson--founta-conv_1e-5_2315092.outt",
-        "checkpoints": "checkpoints/founta/conv-2315092"
-      },
-      "2e-05":
-      {
-        "results": "output/1604411848/test_out_large-2315093-founta/conv-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/large_davidson--founta-conv_2e-5_2315093.out",
-        "checkpoints": "checkpoints/founta/conv-2315093"
+        "1e-05":
+        {
+          "results": "output/1604411829/test_out_large-2315092-founta/conv-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/large_davidson--founta-conv_1e-5_2315092.outt",
+          "checkpoints": "checkpoints/founta/conv-2315092"
+        },
+        "2e-05":
+        {
+          "results": "output/1604411848/test_out_large-2315093-founta/conv-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/large_davidson--founta-conv_2e-5_2315093.out",
+          "checkpoints": "checkpoints/founta/conv-2315093"
+        }
       }
     }
+    
   },
   "founta/conv":
   {
@@ -238,11 +258,13 @@
       {
         "1e-05":
         {
-          
+          "results": "output/1604424158/test_out-2315794-davidson-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie-base-1-founta-conv-on-davidson_2315794.outt"
         },
         "2e-05":
         {
-
+          "results": "output/1604424158/test_out-2315804-davidson-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/ernie-base-2-founta-conv-on-davidson_2315804.out"
         }
       },
       "large":
