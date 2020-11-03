@@ -33,6 +33,40 @@
     }
     
   },
+  "davidson/filtered":
+  {
+    "base" :
+    {
+      "1e-05":
+      {
+        "results": "output/1604403934/test_out-2315014-davidson/filtered-1e-5-32-4.tsv",
+        "log": "../slurm-out/archive/base_davidson_filtered_oversampled_1e-5_2315014.out",
+        "checkpoints":"checkpoints/davidson-2110798/step_1241"
+      },
+      "2e-05":
+      {
+        "results": "output/1604403937/test_out-2315015-davidson/filtered-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/base_davidson_filtered_oversampled_2e-5_2315015.out",
+        "checkpoints":"checkpoints/davidson-2110713/step_1241"
+      }
+    },
+    "large":
+    {
+      "1e-05":
+      {
+        "results": "output/1603992791/test_out_large-2110962-davidson-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_full_large_1e-05_2110962.out",
+        "checkpoints":"checkpoints/davidson-2110962/step_1241"
+      },
+      "2e-05":
+      {
+        "results": "output/1603992941/test_out_large-2111012-davidson-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/ernie_davidson_full_large_2e-05_2111012.out",
+        "checkpoints":"checkpoints/davidson-2111012/step_1241"
+      }
+    }
+    
+  },
   "founta":
   {
     "base" :
@@ -94,25 +128,23 @@
       "2e-05":
       {
         "results": "output/1604073875/test_out_large-2195113-solid-2e-5-32-4.tsv",
-        "log":"../slurm-out/archive/ernie_solid_large_2e-05_2086156.out"
+        "log":"../slurm-out/archive/base_founta-conv--davidson_1e-5_2315182.out"
       }
     }
   },
-  "founta/conv":
+  "founta/conv-davidson":
   {
     "base" :
     {
       "1e-05":
       {
-        "results": "output/1604074555/test_out-2198744-founta/conv-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/base_founta_conv_1e-5_2198744.out",
-        "checkpoints": ""
+        "results": "output/1604412219/test_out-2315182-davidson-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/base_founta-conv--davidson_1e-5_2315182.out"
       },
       "2e-05":
       {
-        "results": "output/1604075251/test_out-2198795-founta/conv-2e-5-32-4.tsv",
-        "log": "../slurm-out/archive/base_founta_conv_2e-5_2198795.out",
-        "checkpoints": ""
+        "results": "output/1604412557/test_out-2315189-davidson-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/base_founta-conv--davidson_2e-5_2315189.out"
       }
       
     },
@@ -120,15 +152,111 @@
     {
       "1e-05":
       {
-        "results": "output/1604075878/test_out_large-2198990-founta/conv-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/large_founta_conv_1e-5_2198990.out",
-        "checkpoints": ""
+        "results": "output/1604409632/test_out_large-2315059-davidson-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/large_founta-conv--davidson_1e-5_2315059.out"
       },
       "2e-05":
       {
-        "results": "output/1604076535/test_out_large-2198991-founta/conv-1e-5-32-4.tsv",
-        "log":"../slurm-out/archive/large_founta_conv_2e-5_2198991.out",
-        "checkpoints": ""
+        "results": "output/1604409714/test_out_large-2315060-davidson-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/large_founta-conv--davidson_2e-5_2315060.out"
+      }
+    }
+  },
+  "davidson-founta/conv":
+  {
+    "base" :
+    {
+      "1e-05":
+      {
+        "results": "output/1604410289/test_out-2315090-founta/conv-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/base_davidson--founta-conv_1e-5_2315090.out",
+        "checkpoints": "checkpoints/founta/conv-2315090"
+      },
+      "2e-05":
+      {
+        "results": "output/1604410399/test_out-2315091-founta/conv-2e-5-32-4.tsv",
+        "log": "../slurm-out/archive/base_davidson--founta-conv_2e-5_2315091.out",
+        "checkpoints": "checkpoints/founta/conv-2315091"
+      }
+      
+    },
+    "large":
+    {
+      "1e-05":
+      {
+        "results": "output/1604411829/test_out_large-2315092-founta/conv-1e-5-32-4.tsv",
+        "log":"../slurm-out/archive/large_davidson--founta-conv_1e-5_2315092.outt",
+        "checkpoints": "checkpoints/founta/conv-2315092"
+      },
+      "2e-05":
+      {
+        "results": "output/1604411848/test_out_large-2315093-founta/conv-2e-5-32-4.tsv",
+        "log":"../slurm-out/archive/large_davidson--founta-conv_2e-5_2315093.out",
+        "checkpoints": "checkpoints/founta/conv-2315093"
+      }
+    }
+  },
+  "founta/conv":
+  {
+    "founta/conv":
+    {
+      "base" :
+      { 
+        "1e-05":
+        {
+          "results": "output/1604074555/test_out-2198744-founta/conv-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/base_founta_conv_1e-5_2198744.out",
+          "checkpoints": "checkpoints/founta/conv-2198744/step_2529"
+        },
+        "2e-05":
+        {
+          "results": "output/1604075251/test_out-2198795-founta/conv-2e-5-32-4.tsv",
+          "log": "../slurm-out/archive/base_founta_conv_2e-5_2198795.out",
+          "checkpoints": "checkpoints/founta/conv-2198795/step_2529"
+        }
+      
+      },
+      "large":
+      {
+        "1e-05":
+        {
+          "results": "output/1604349757/test_out_large-2302343-founta/conv-1e-5-32-4.tsv",
+          "log":"../slurm-out/archive/large_founta_1e-5_2302343.out",
+          "checkpoints": "checkpoints/founta/conv-2302343/step_2529"
+        },
+        "2e-05":
+        {
+          "results": "output/1604403481/test_out_large-2315001-founta/conv-2e-5-32-4.tsv",
+          "log":"../slurm-out/archive/large_founta_2e-5_2315001.out",
+          "checkpoints": "checkpoints/founta/conv-2315001/step_2529"
+        }
+      }
+    },
+    "davidson":
+    {
+      "base": 
+      {
+        "1e-05":
+        {
+          
+        },
+        "2e-05":
+        {
+
+        }
+      },
+      "large":
+      {
+        "1e-05":
+        {
+          "results": "output/1604410499/test_out_large-2315129-davidson-1e-5-32-4.tsv",
+          "log": "../slurm-out/archive/ernie-large-1-founta-conv-on-davidson_2315129.out"
+        },
+        "2e-05":
+        {
+          "results": "output/1604410541/test_out_large-2315130-davidson-2e-5-32-4.tsv",
+          "log": "../slurm-out/archive/ernie-large-2-founta-conv-on-davidson_2315130.out"
+        }
       }
     }
     
