@@ -23,7 +23,7 @@ else:
   text_a = None
 
 print("{} getting processor\n".format(rank))
-processor = Processor(preserve_case=False, reduce_len=False, strip_handles=False, demojize=True, replace_url=True, segment_hashtags=True, correct_user=True, url_to_http=True, remove_rt=True, change_at=False)
+processor = Processor(preserve_case=False, reduce_len=False, strip_handles=True, demojize=True, replace_url=True, segment_hashtags=True, correct_user=True, url_to_http=True, remove_rt=True, change_at=False)
 
 text_a = comm.scatter(text_a, root=0)
 
@@ -33,7 +33,7 @@ text_a_tmp = []
 for t in tqdm(text_a, total=len(text_a)):
   text_a_tmp.append(processor.process(t))
 
-text_a = np.asarray(text_a_tmp)
+text_a = text_a_tmp
 
 del text_a_tmp
 
@@ -42,11 +42,14 @@ print("Rank {} of {} finished\n".format(rank, size))
 text_a = comm.gather(text_a, root=0)
 
 if rank == 0:
-  text_a = np.concatenate(text_a)
-
-  print(text_a.shape)
-  df.text_a = text_a
+  text_a_tmp = []
+  for part in tqdm(text_a, total=len(text_a)):
+    text_a_tmp += part
+  del text_a
+  print(len(text_a_tmp))
+  df.text_a = text_a_tmp
+  del text_a_tmp
   print(df.head())
-  df.to_csv('../ernie/data/solid/paralell_test.tsv', index=False, sep='\t')
+  df.to_csv('../data/solid/conv/train_processed.tsv', index=False, sep='\t')
 
 
