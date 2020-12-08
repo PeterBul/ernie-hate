@@ -12,18 +12,20 @@ parser.add_argument('--results', type=str, default=None)
 parser.add_argument('--founta2davidson', default=False, action='store_true')
 parser.add_argument('--model_size', type=str)
 parser.add_argument('--lr_text', type=str)
+parser.add_argument('--model_dataset', type=str, required=True)
+parser.add_argument('--test_dataset', type=str)
 
 args = parser.parse_args()
 
 ERNIE_PATH = '../ERNIE/'
 archive_path = '../configs/archive.json'
-model_dataset = 'founta/conv'
-test_dataset = 'davidson'
+model_dataset = args.model_dataset
+test_dataset = args.test_dataset
 #target_names = ['NOT', 'OFF']
-target_names = ['Hateful', 'Offensive', 'Neither']
-#target_names = ['Abusive', 'Hateful', 'Normal', 'Spam']
+target_names = ['Hateful', 'Abusive', 'Normal', 'Spam'] if test_dataset == 'founta/isaksen/spam' else ['Hateful', 'Offensive', 'Neither'] 
 
 founta2davidson = {0:1, 1:0, 2:2, 3:2}
+oldfounta2newfounta = {0:1, 1:0, 2:2, 3:3}
 
 
 def evaluate(model_size, lr_text):
@@ -47,23 +49,26 @@ def get_path(model_dataset, test_dataset, model_size, lr):
 
 def batch_evaluate():
   rows = []
-  y_true = get_y_true(test_dataset)
-  probs = []
-  preds = []
-  for model_size in ['base', 'large']:
-    for lr in ['1e-05', '2e-05']:
-      preds_tmp, probs_tmp = get_preds_and_probs(model_dataset, test_dataset, model_size, lr)
-      row = flatten_classification_report(get_classification_report(y_true, preds_tmp, target_names), name="{} {}".format(model_size, lr))
-      rows.append(row)
-      probs.append(probs_tmp)
-      preds.append(preds_tmp)
-  
-  y_maj = get_majority_voting(preds)
-  y_sum = get_sum_of_probs(probs)
-  row = flatten_classification_report(get_classification_report(y_true, y_maj, target_names), name="Ensamble Majority Vote")
-  rows.append(row)
-  columns, row = flatten_classification_report(get_classification_report(y_true, y_sum, target_names), name="Ensamble Sum", return_columns=True)
-  rows.append(row)
+  columns = None
+  for test_dataset in ['solid/conv', 'davidson', 'founta/isaksen']:
+    y_true = get_y_true(test_dataset)
+    probs = []
+    preds = []
+    for model_size in ['base', 'large']:
+      for lr in ['1e-05']:
+        preds_tmp, probs_tmp = get_preds_and_probs(model_dataset, test_dataset, model_size, lr)
+        columns, row = flatten_classification_report(get_classification_report(y_true, preds_tmp, target_names), name="{} {} {}".format(test_dataset, model_size, lr), return_columns=True)
+        rows.append(row)
+        #probs.append(probs_tmp)
+        #preds.append(preds_tmp)
+    """
+    y_maj = get_majority_voting(preds)
+    y_sum = get_sum_of_probs(probs)
+    row = flatten_classification_report(get_classification_report(y_true, y_maj, target_names), name="Ensamble Majority Vote")
+    rows.append(row)
+    columns, row = flatten_classification_report(get_classification_report(y_true, y_sum, target_names), name="Ensamble Sum", return_columns=True)
+    rows.append(row)
+    """
   return pd.DataFrame(rows, columns=columns)
 
 def get_preds_and_probs(model_dataset, test_dataset, model_size, lr):
@@ -90,3 +95,5 @@ def load_archive():
 
 if __name__ == "__main__":
   evaluate(args.model_size, args.lr_text)
+  #df = batch_evaluate()
+  #df.to_csv("./tmp/eval.csv")

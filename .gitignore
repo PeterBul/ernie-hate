@@ -5,6 +5,7 @@
 /paddlepaddle
 /slurm-out
 /saved_weights*
+*/data
 *__pycache__*
 *.slurm
 src/tmp*
