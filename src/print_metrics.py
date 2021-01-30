@@ -36,3 +36,6 @@ def flatten_classification_report(classification_report, name, return_columns=Fa
     return columns, row
   else:
     return row
+
+if __name__ == "__main__":
+  pass
